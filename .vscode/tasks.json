@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Conda: Create scanner-ocr",
+      "type": "shell",
+      "command": "conda env create -f environment.yml",
+      "problemMatcher": []
+    },
+    {
+      "label": "API: Run dev server",
+      "type": "shell",
+      "command": "conda run -n scanner-ocr uvicorn main:app --reload --app-dir src --host 0.0.0.0 --port 8001",
+      "problemMatcher": []
+    }
+  ]
+}
