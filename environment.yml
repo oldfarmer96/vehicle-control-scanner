@@ -1,0 +1,11 @@
+name: scanner-ocr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.13
+  - pip
+  - pip:
+      - fastapi==0.115.12
+      - uvicorn[standard]==0.32.1
+      - pydantic-settings==2.6.1
