@@ -95,13 +95,14 @@ Installer output:
 ## Publish Release on GitHub (web UI)
 
 1. Push changes to `main`.
-2. In GitHub repo, open `Releases`.
-3. Click `Draft a new release`.
-4. Create tag like `v0.1.1` (must match `VERSION`).
-5. Release title: `Vehicle Control Scanner v0.1.1`.
-6. In description add summary of changes.
-7. Upload file `dist/VehicleControlScanner-Setup-0.1.1.exe`.
-8. Click `Publish release`.
+2. Update `CHANGELOG.md` moving items from `Unreleased` to the new version section.
+3. In GitHub repo, open `Releases`.
+4. Click `Draft a new release`.
+5. Create tag like `v0.1.1` (must match `VERSION`).
+6. Release title: `Vehicle Control Scanner v0.1.1`.
+7. In description add summary of changes (you can copy from `CHANGELOG.md`).
+8. Upload file `dist/VehicleControlScanner-Setup-0.1.1.exe`.
+9. Click `Publish release`.
 
 Recommended release assets:
 
