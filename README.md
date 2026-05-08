@@ -61,6 +61,12 @@ Build de instalador NSIS:
 make build-setup
 ```
 
+Actualizar version de release (ejemplo):
+
+```bash
+make set-version VERSION=0.1.1
+```
+
 ## Empaquetado para Windows
 
 - El ejecutable se construye con PyInstaller usando `src/launcher.py`.
@@ -81,7 +87,7 @@ Archivos clave:
 ### Salidas esperadas
 
 - Ejecutable: `dist/vehicle-control-scanner/vehicle-control-scanner.exe`
-- Instalador: `dist/VehicleControlScanner-Setup-0.1.0.exe`
+- Instalador: `dist/VehicleControlScanner-Setup-<VERSION>.exe`
 
 ### Comandos directos (sin Make)
 

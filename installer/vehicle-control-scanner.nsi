@@ -4,7 +4,9 @@ Unicode True
 
 !define APP_NAME "Vehicle Control Scanner"
 !define APP_EXE "vehicle-control-scanner.exe"
+!ifndef APP_VERSION
 !define APP_VERSION "0.1.0"
+!endif
 !define PUBLISHER "OldFarmer96"
 !define INSTALL_DIR "$PROGRAMFILES64\Vehicle Control Scanner"
 

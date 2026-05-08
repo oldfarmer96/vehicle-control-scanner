@@ -2,6 +2,18 @@
 
 This guide explains how to rebuild the executable and generate the NSIS installer.
 
+## Version source
+
+- Release version is stored in `VERSION`.
+- Default current value: `0.1.0`.
+- NSIS installer name uses this version automatically.
+
+Update version:
+
+```bash
+pwsh -File scripts/set_version.ps1 -Version 0.1.1
+```
+
 ## Prerequisites
 
 - Miniconda/Conda installed.
@@ -60,7 +72,7 @@ Main file used:
 
 Installer output:
 
-- `dist/VehicleControlScanner-Setup-0.1.0.exe`
+- `dist/VehicleControlScanner-Setup-<VERSION>.exe`
 
 ## What the installer config does
 
@@ -78,4 +90,20 @@ Installer output:
 1. Update code/config.
 2. Run `make build-exe`.
 3. Run `make build-setup`.
-4. Test `dist/VehicleControlScanner-Setup-0.1.0.exe` on a clean machine.
+4. Test `dist/VehicleControlScanner-Setup-<VERSION>.exe` on a clean machine.
+
+## Publish Release on GitHub (web UI)
+
+1. Push changes to `main`.
+2. In GitHub repo, open `Releases`.
+3. Click `Draft a new release`.
+4. Create tag like `v0.1.1` (must match `VERSION`).
+5. Release title: `Vehicle Control Scanner v0.1.1`.
+6. In description add summary of changes.
+7. Upload file `dist/VehicleControlScanner-Setup-0.1.1.exe`.
+8. Click `Publish release`.
+
+Recommended release assets:
+
+- `VehicleControlScanner-Setup-<VERSION>.exe`
+- Optional checksum file (`SHA256SUMS.txt`).

@@ -1,4 +1,4 @@
-.PHONY: dev run build-exe build-setup
+.PHONY: dev run build-exe build-setup set-version
 
 dev:
 	uvicorn main:app --reload --app-dir src --host 0.0.0.0 --port 8001
@@ -10,3 +10,6 @@ build-exe:
 
 build-setup:
 	pwsh -File scripts/build_setup.ps1
+
+set-version:
+	pwsh -File scripts/set_version.ps1 -Version $(VERSION)
