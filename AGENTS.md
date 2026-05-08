@@ -2,9 +2,8 @@
 
 ## Contexto operativo de este workspace
 
-- Este entorno de agente no tiene acceso usable a tus binarios de Python/pip de tu otra terminal.
-- Por esa razon, aqui no se ejecutan comandos como `python`, `pip`, `fastapi` o `uvicorn`.
-- Si se necesitan instalaciones o arranque del servidor, debes ejecutarlos en tu terminal local donde si tienes Python configurado.
+- Este entorno tiene acceso operativo a `python`, `pip` y `conda`.
+- Se pueden ejecutar builds, instalacion de dependencias y empaquetado `.exe` desde esta terminal.
 
 ## Que si puede hacer este agente
 
@@ -12,6 +11,7 @@
 - Crear/editar estructura de codigo.
 - Definir arquitectura inicial y mejores practicas.
 - Preparar `requirements.txt`, `.env.example` y rutas API base.
+- Ejecutar build con PyInstaller y crear instalador NSIS.
 
 ## Comandos que debes ejecutar tu (Miniconda + Python 3.12)
 
@@ -41,3 +41,5 @@ Version esperada de Python en ese entorno: `3.12.13`.
 
 - Recomendado: PyInstaller en etapa de distribucion.
 - Incluir carpeta de datos (`data/`) y backups (`backups/`) como rutas externas al ejecutable.
+- Script build disponible: `scripts/build_exe.ps1`.
+- Instalador NSIS disponible: `installer/vehicle-control-scanner.nsi`.
